@@ -1005,7 +1005,7 @@ void main() {
         materialSpecular = material.specular;
     }
     
-    float shadowing;
+    float shadowing = 1.0;
     if (mUseShadowMap > 0) {
         bool softShadows = (flags & ENABLE_SOFT_SHADOWS_FLAG) > 0;
         shadowing = 1.0 - calculateShadow(FragPosLightSpace, softShadows);
